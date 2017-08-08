@@ -22,7 +22,9 @@
             Return _nombre
         End Get
         Set(value As String)
-            _nombre = value
+            If value.Length <= 30 Then
+                _nombre = value
+            End If
         End Set
     End Property
 
@@ -43,4 +45,8 @@
             _fechaNacimiento = value
         End Set
     End Property
+
+    Public Overrides Function ToString() As String
+        Return Nombre & "(" & Documento & ")"
+    End Function
 End Class
