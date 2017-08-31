@@ -64,8 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.vb" />
+    <Compile Include="CajaDeAhorro.vb" />
     <Compile Include="Cliente.vb" />
     <Compile Include="Cuenta.vb" />
+    <Compile Include="CuentaCorriente.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

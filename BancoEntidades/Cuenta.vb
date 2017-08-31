@@ -1,7 +1,7 @@
-﻿Public Class Cuenta
+﻿Public MustInherit Class Cuenta
 
     Private _numero As Integer
-    Private _balance As Double
+    Protected _balance As Double
 
     Sub New()
         _numero = 0
@@ -27,7 +27,7 @@
         _balance = _balance + value
     End Sub
 
-    Public Function Extraer(value As Double) As Boolean
+    Public Overridable Function Extraer(value As Double) As Boolean
         If _balance >= value Then
             _balance = _balance - value
             Return True
