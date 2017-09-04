@@ -25,7 +25,4 @@
         End If
     End Function
 
-    Public Sub Capitalizar()
-
-    End Sub
 End Class

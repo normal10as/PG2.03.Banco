@@ -17,4 +17,7 @@
         End Set
     End Property
 
+    Public Sub Capitalizar()
+
+    End Sub
 End Class
