@@ -3,9 +3,9 @@
 Module CuentaCorrienteTest
     Sub main()
         ' creacion e instanciacion
-        Dim cuenta1 As New CuentaCorriente()
-        cuenta1.Numero = 54345345
-        cuenta1.MontoSobregiro = 1000
+        Dim cuenta1 As New CuentaCorriente(432432, 0, 1000)
+        'cuenta1.Numero = 54345345
+        'cuenta1.MontoSobregiro = 1000
         'no se puede hacer cuenta1.Balance = 530000000
         Console.WriteLine("Numero de cuenta: " & cuenta1.Numero)
         Console.WriteLine("Balance: " & cuenta1.Balance)
@@ -24,5 +24,10 @@ Module CuentaCorrienteTest
         monto = 1000
         Console.WriteLine("Extraigo {0}: " & cuenta1.Extraer(monto), monto)
         Console.WriteLine("Balance: " & cuenta1.Balance)
+        Dim cuenta2 As Cuenta
+        cuenta2 = New CuentaCorriente(54354, 0, 1000)
+        monto = 900
+        Console.WriteLine("Extraigo {0}: " & cuenta2.Extraer(monto), monto)
+        Console.WriteLine("Balance: " & cuenta2.Balance)
     End Sub
 End Module

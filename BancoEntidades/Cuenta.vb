@@ -4,8 +4,12 @@
     Protected _balance As Double
 
     Sub New()
-        _numero = 0
-        _balance = 0
+        Me.New(0, 0)
+    End Sub
+
+    Sub New(numero As Integer, balance As Double)
+        Me.Numero = numero
+        _balance = balance
     End Sub
 
     Public Property Numero As Integer

@@ -2,9 +2,9 @@
     Inherits Cuenta
     Private _montoSobregiro As Single
 
-    Sub New()
-        MyBase.New
-        _montoSobregiro = 0
+    Sub New(numero As Integer, balance As Double, montoSobregiro As Single)
+        MyBase.New(numero, balance)
+        Me.MontoSobregiro = montoSobregiro
     End Sub
 
     Public Property MontoSobregiro As Single

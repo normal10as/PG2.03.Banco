@@ -3,9 +3,9 @@
 
     Private _interesMensual As Single
 
-    Sub New()
-        MyBase.New
-        _interesMensual = 0
+    Sub New(numero As Integer, balance As Double, interesMensual As Single)
+        MyBase.New(numero, balance)
+        Me.InteresMensual = interesMensual
     End Sub
 
     Public Property InteresMensual As Single
@@ -18,6 +18,6 @@
     End Property
 
     Public Sub Capitalizar()
-
+        _balance += Balance * InteresMensual / 100
     End Sub
 End Class
