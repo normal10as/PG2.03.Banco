@@ -2,8 +2,8 @@
     Inherits Cuenta
     Private _montoSobregiro As Single
 
-    Sub New(numero As Integer, balance As Double, montoSobregiro As Single)
-        MyBase.New(numero, balance)
+    Sub New(numero As Integer, balance As Double, montoSobregiro As Single, cliente As Cliente)
+        MyBase.New(numero, balance, cliente)
         Me.MontoSobregiro = montoSobregiro
     End Sub
 
@@ -23,6 +23,10 @@
         Else
             Return False
         End If
+    End Function
+
+    Public Overrides Function ToString() As String
+        Return Numero & "(" & cliente.Nombre & ")"
     End Function
 
 End Class

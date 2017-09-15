@@ -2,14 +2,16 @@
 
     Private _numero As Integer
     Protected _balance As Double
+    Private _cliente As Cliente
 
     Sub New()
-        Me.New(0, 0)
+        Me.New(0, 0, New Cliente())
     End Sub
 
-    Sub New(numero As Integer, balance As Double)
+    Sub New(numero As Integer, balance As Double, cliente As Cliente)
         Me.Numero = numero
         _balance = balance
+        Me.cliente = cliente
     End Sub
 
     Public Property Numero As Integer
@@ -25,6 +27,15 @@
         Get
             Return _balance
         End Get
+    End Property
+
+    Public Property cliente As Cliente
+        Get
+            Return _cliente
+        End Get
+        Set(value As Cliente)
+            _cliente = value
+        End Set
     End Property
 
     Public Sub Depositar(value As Double)
