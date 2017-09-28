@@ -34,6 +34,7 @@
             Return _cliente
         End Get
         Set(value As Cliente)
+            value.addCuenta(Me)
             _cliente = value
         End Set
     End Property

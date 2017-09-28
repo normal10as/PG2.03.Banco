@@ -2,12 +2,14 @@
     Private _nombre As String
     Private _documento As Integer
     Private _fechaNacimiento As Date
+    Private _cuentas As List(Of Cuenta)
 
     ' constructor
     Sub New()
         _nombre = ""
         _documento = 0
         _fechaNacimiento = Nothing
+        _cuentas = New List(Of Cuenta)
     End Sub
 
     Sub New(nombre As String, documento As Integer, fechaNacimiento As Date)
@@ -45,6 +47,14 @@
             _fechaNacimiento = value
         End Set
     End Property
+
+    Public Sub addCuenta(Cuenta As Cuenta)
+        _cuentas.Add(Cuenta)
+    End Sub
+
+    Public Function getAllCuentas() As List(Of Cuenta)
+        Return _cuentas
+    End Function
 
     Public Overrides Function ToString() As String
         Return Nombre & "(" & Documento & ")"

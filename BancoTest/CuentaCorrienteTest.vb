@@ -26,10 +26,17 @@ Module CuentaCorrienteTest
         monto = 1000
         Console.WriteLine("Extraigo {0}: " & cuenta1.Extraer(monto), monto)
         Console.WriteLine("Balance: " & cuenta1.Balance)
+
         Dim cuenta2 As Cuenta
-        cuenta2 = New CuentaCorriente(54354, 0, 1000, New Cliente("Neymar", 463743, #01-01-1993#))
+        'cuenta2 = New CuentaCorriente(54354, 0, 1000, New Cliente("Neymar", 463743, #01-01-1993#))
+        cuenta2 = New CuentaCorriente(54354, 0, 1000, cliente1)
         monto = 900
         Console.WriteLine("Extraigo {0}: " & cuenta2.Extraer(monto), monto)
         Console.WriteLine("Balance: " & cuenta2.Balance)
+
+        Console.WriteLine("Cuenta - Cliente")
+        For Each cuenta As Cuenta In cliente1.getAllCuentas()
+            Console.WriteLine(cuenta.ToString & " - " & cuenta.cliente.ToString())
+        Next
     End Sub
 End Module
