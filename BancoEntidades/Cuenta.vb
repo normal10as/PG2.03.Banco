@@ -33,8 +33,7 @@
         Get
             Return _cliente
         End Get
-        Set(value As Cliente)
-            value.addCuenta(Me)
+        Friend Set(value As Cliente)
             _cliente = value
         End Set
     End Property

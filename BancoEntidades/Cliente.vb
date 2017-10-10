@@ -49,7 +49,19 @@
     End Property
 
     Public Sub addCuenta(Cuenta As Cuenta)
-        _cuentas.Add(Cuenta)
+        If _cuentas.Count < 2 Then
+            If Cuenta.cliente IsNot Nothing Then
+                Dim otroCliente = Cuenta.cliente
+                otroCliente.removeCuenta(Cuenta)
+            End If
+            Cuenta.cliente = Me
+            _cuentas.Add(Cuenta)
+        End If
+    End Sub
+
+    Public Sub removeCuenta(cuenta As Cuenta)
+        cuenta.cliente = Nothing
+        _cuentas.Remove(cuenta)
     End Sub
 
     Public Function getAllCuentas() As List(Of Cuenta)
