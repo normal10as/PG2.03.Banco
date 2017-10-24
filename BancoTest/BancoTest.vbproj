@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F575771E-3D1D-478C-908A-2D9780B20FB4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>BancoTest.CuentaCorrienteTest</StartupObject>
+    <StartupObject>BancoTest.BancoTest</StartupObject>
     <RootNamespace>BancoTest</RootNamespace>
     <AssemblyName>BancoTest</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BancoTest.vb" />
+    <Compile Include="CajaDeAhorroTest.vb" />
     <Compile Include="ClienteTest.vb" />
     <Compile Include="CuentaCorrienteTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
