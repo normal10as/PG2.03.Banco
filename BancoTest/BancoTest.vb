@@ -12,6 +12,21 @@ Module BancoTest
         For Each cliente As Cliente In Banco.getAllClientes
             Console.WriteLine(cliente.ToString)
         Next
+
+        Dim documento As Integer = 463743
+        Console.WriteLine(Banco.containsCliente(cliente1))
+        Console.WriteLine(Banco.existsClienteByDocumento(documento))
+        Console.WriteLine(Banco.findClienteByDocumento(documento))
+        Console.WriteLine("Buscar Ney")
+        For Each cliente As Cliente In Banco.findAllClientesByNombre("Ney")
+            Console.WriteLine(cliente.ToString)
+        Next
+
+        Console.WriteLine("Buscar r")
+        For Each cliente As Cliente In Banco.findAllClientesByNombre("r")
+            Console.WriteLine(cliente.ToString)
+        Next
+
         Console.WriteLine("Eliminar")
         Banco.removeCliente(cliente1)
         Console.WriteLine("Mostrar")
