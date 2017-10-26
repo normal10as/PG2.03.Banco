@@ -22,6 +22,10 @@ Module ClienteTest
         Console.WriteLine("Documento: " & cliente2.Documento)
         Console.WriteLine("Fecha de nacimiento: " & cliente2.fechaNacimiento)
         Console.WriteLine("ToString: " & cliente2.ToString())
+
+        Dim cliente3 As New Cliente(cliente1.Nombre, cliente1.Documento, cliente1.fechaNacimiento)
+        Console.WriteLine("cliente1  and cliente2: {0}", cliente1.Equals(cliente2))
+        Console.WriteLine("cliente1 and cliente3: {0}", cliente1.Equals(cliente3))
     End Sub
 
 End Module
