@@ -32,5 +32,4 @@
     Public Shared Function findAllClientesByNombre(nombre As String) As List(Of Cliente)
         Return _clientes.FindAll(Function(c) c.Nombre.Contains(nombre))
     End Function
-
 End Class

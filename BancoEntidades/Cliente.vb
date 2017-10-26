@@ -71,4 +71,12 @@
     Public Overrides Function ToString() As String
         Return Nombre & "(" & Documento & ")"
     End Function
+
+    Public Overrides Function Equals(obj As Object) As Boolean
+        Dim unCliente As Cliente = TryCast(obj, Cliente)
+        If unCliente Is Nothing Then
+            Return False
+        End If
+        Return unCliente.Documento = Me.Documento
+    End Function
 End Class
